@@ -15,6 +15,6 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = new Vector3(Player.transform.position.x, 5f, -10f);
+        transform.position = new Vector3(Player.transform.position.x, 1f, -15f);
     }
 }
