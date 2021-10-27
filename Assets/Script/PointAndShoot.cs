@@ -6,10 +6,9 @@ using UnityEngine.UI;
 public class PointAndShoot : MonoBehaviour
 {
     private Vector3 target;
-    public GameObject crosshairs;
-    public GameObject player;
+    public GameObject shooter;
     public GameObject bulletP;
-
+    public GameObject Player;
     public float bulletspeed = 60;
 
     private Vector2 cursorPosition;
@@ -28,14 +27,13 @@ public class PointAndShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        shooter.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
 
         target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(cursorPosition.x, cursorPosition.y, transform.position.z));
-        //crosshairs.transform.position = new Vector2(-target.x, (-target.y + 2));
 
-        Vector3 difference = target - player.transform.position;
+        Vector3 difference = target - shooter.transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        player.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
+        shooter.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
 
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -49,7 +47,7 @@ public class PointAndShoot : MonoBehaviour
     void fireBullet(Vector2 direction,float rotationZ)
     {
         GameObject b = Instantiate(bulletP) as GameObject;
-        b.transform.position = player.transform.position;
+        b.transform.position = shooter.transform.position;
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
         b.GetComponent<Rigidbody2D>().velocity = direction * bulletspeed;
     }
@@ -65,6 +63,8 @@ public class PointAndShoot : MonoBehaviour
         cursorPosition.y += v;
 
         GUI.DrawTexture(new Rect(cursorPosition.x, Screen.height - cursorPosition.y, cursorWidth, cursorHeight), cursorImage);
+        
+
     }
 
 }

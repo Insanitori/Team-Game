@@ -33,7 +33,7 @@ public class PlayerControl : MonoBehaviour
 
         //transform.Translate(Vector3.forward * Time.deltaTime * speed * hInport);
         //transform.Rotate(Vector3.up, turner * hInport * Time.deltaTime);
-        transform.Translate(Vector3.left * Time.deltaTime * speed * vInport);
+        transform.Translate(Vector3.right * Time.deltaTime * speed * vInport);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGorunded)
         {
