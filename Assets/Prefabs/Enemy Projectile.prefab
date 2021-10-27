@@ -109,5 +109,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthbar: {fileID: 0}
-  fly: 40
-  player: {fileID: 0}
+  fly: 100

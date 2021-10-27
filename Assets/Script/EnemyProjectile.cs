@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnemyProjectile : MonoBehaviour
 {
     public Image healthbar;
-    public float fly = 10.0f;
+    public float fly;
     //public GameObject;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class EnemyProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left * Time.deltaTime * fly);
+        //transform.Translate(Vector3.left * Time.deltaTime * fly);
     }
 
     private void OnTriggerEnter(Collider other)

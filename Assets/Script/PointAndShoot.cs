@@ -54,16 +54,12 @@ public class PointAndShoot : MonoBehaviour
 
     private void OnGUI()
     {
-        // these are not actual positions but the change between last frame and now
         float h = horizontalSpeed * Input.GetAxis("Horizontal2") * Time.deltaTime;
         float v = verticalSpeed * Input.GetAxis("Vertical2") * Time.deltaTime;
-
-        // add the changes to the actual cursor position
         cursorPosition.x += h;
         cursorPosition.y += v;
 
         GUI.DrawTexture(new Rect(cursorPosition.x, Screen.height - cursorPosition.y, cursorWidth, cursorHeight), cursorImage);
-        
 
     }
 
