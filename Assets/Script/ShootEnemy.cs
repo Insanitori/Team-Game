@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShootEnemy : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class ShootEnemy : MonoBehaviour
     private GameObject player;
     public float fast;
     private Rigidbody shootRb;
+    public GameObject projectile;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,8 @@ public class ShootEnemy : MonoBehaviour
     {
         if ((player.transform.position - this.transform.position).sqrMagnitude < 15 * 15)
         {
-            //this is where they stop and shoot!
+            Instantiate(projectile, transform.position, projectile.transform.rotation);
+            transform.LookAt(player.transform, Vector3.up);
             if ((player.transform.position - this.transform.position).sqrMagnitude < 6 * 6)
             {
                 shootRb.AddForce((player.transform.position + transform.position).normalized * fast);

@@ -16,8 +16,6 @@ public class PlayerControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.visible = false;
-
         rb = GetComponent<Rigidbody>();
         jup = new Vector3(0.0f, 5.0f, 0.0f);
     }
@@ -35,7 +33,7 @@ public class PlayerControl : MonoBehaviour
 
         //transform.Translate(Vector3.forward * Time.deltaTime * speed * hInport);
         //transform.Rotate(Vector3.up, turner * hInport * Time.deltaTime);
-        transform.Translate(Vector3.right * Time.deltaTime * speed * vInport);
+        transform.Translate(Vector3.left * Time.deltaTime * speed * vInport);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGorunded)
         {
