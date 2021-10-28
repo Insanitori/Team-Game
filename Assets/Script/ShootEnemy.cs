@@ -25,6 +25,7 @@ public class ShootEnemy : MonoBehaviour
         //shootRb = GetComponent<Rigidbody>();
         waypointdex = 0;
         transform.LookAt(waypoints[waypointdex].position);
+        transform.LookAt(Vector3.zero);
     }
 
     // Update is called once per frame
