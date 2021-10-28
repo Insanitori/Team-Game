@@ -2582,7 +2582,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8111164425129362496, guid: 89f8fb6a93a31b948a5d7eeee33b0154, type: 3}
       propertyPath: m_Constraints
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8111164425129362496, guid: 89f8fb6a93a31b948a5d7eeee33b0154, type: 3}
       propertyPath: m_Interpolate

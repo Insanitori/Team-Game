@@ -33,11 +33,11 @@ public class ShootEnemy : MonoBehaviour
         //Remember that you added a tiny game object to the player to make shoot!
         if ((player.transform.position - this.transform.position).sqrMagnitude < 15 * 15)
         {
-            transform.LookAt(player.transform);
+            //transform.LookAt(player.transform);
             if ((player.transform.position - this.transform.position).sqrMagnitude < 6 * 6)
             {
                 //shootRb.AddForce((player.transform.position + transform.position).normalized * fast);
-                transform.Translate(-transform.forward * fast * Time.deltaTime);
+                transform.Translate(-transform.right * fast * Time.deltaTime);
             }
         }
         else
