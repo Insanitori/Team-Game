@@ -8,7 +8,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("spawnZoomies", 3, 20.0f);
+        InvokeRepeating("spawnZoomies", 10, 20.0f);
     }
 
     // Update is called once per frame

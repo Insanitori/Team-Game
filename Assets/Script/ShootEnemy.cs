@@ -18,6 +18,9 @@ public class ShootEnemy : MonoBehaviour
     //private bool ShootUrShot;
     private float fireRate = 1f;
     private float nextFire;
+
+    public int curHealth = 1;
+    public int maxHealth = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,8 @@ public class ShootEnemy : MonoBehaviour
         shootRb = GetComponent<Rigidbody>();
         waypointdex = 0;
         transform.LookAt(waypoints[waypointdex].position);
+
+        curHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -49,6 +54,12 @@ public class ShootEnemy : MonoBehaviour
             }
             patrol();
         }
+
+        if (curHealth == 0)
+        {
+            Destroy(gameObject);
+            Debug.Log("Shooter Dead");
+        }
     }
 
     void patrol()
@@ -64,5 +75,10 @@ public class ShootEnemy : MonoBehaviour
             waypointdex = 0;
         }
         transform.LookAt(waypoints[waypointdex].position);
+    }
+
+    public void DamageEnemy(int damage)
+    {
+        curHealth -= damage;
     }
 }

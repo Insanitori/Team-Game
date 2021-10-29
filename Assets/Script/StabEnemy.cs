@@ -16,7 +16,9 @@ public class StabEnemy : MonoBehaviour
     private Rigidbody stabRb;
 
     private HealthPoints hurt;
-    
+    public int curHealth = 1;
+    public int maxHealth = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,8 @@ public class StabEnemy : MonoBehaviour
         stabRb = GetComponent<Rigidbody>();
         waypointdex = 0;
         transform.LookAt(waypoints[waypointdex].position);
+
+        curHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -43,6 +47,12 @@ public class StabEnemy : MonoBehaviour
             }
             patrol();
         }
+
+        if (curHealth == 0)
+        {
+            Destroy(gameObject);
+            Debug.Log("Stabby Dead");
+        }
     }
 
     void patrol()
@@ -58,6 +68,11 @@ public class StabEnemy : MonoBehaviour
             waypointdex = 0;
         }
         transform.LookAt(waypoints[waypointdex].position);
+    }
+
+    public void DamageEnemy(int damage)
+    {
+        curHealth -= damage;
     }
 
 }

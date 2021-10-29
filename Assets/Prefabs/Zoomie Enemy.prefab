@@ -184,3 +184,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  curHealth: 1
+  maxHealth: 100

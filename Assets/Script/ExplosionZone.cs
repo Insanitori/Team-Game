@@ -26,7 +26,6 @@ public class ExplosionZone : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            //DelayExplosion(1);
             if ((player.transform.position - this.transform.position).sqrMagnitude < 4 * 4)
             {
                 //while within this range, they pause for one second then explode in an AOE

@@ -10,6 +10,8 @@ TagManager:
   - PP
   - PS
   - ES
+  - Enemy2
+  - Enemy3
   layers:
   - Default
   - TransparentFX

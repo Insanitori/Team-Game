@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 8111164425129362497}
   m_Layer: 0
   m_Name: Shooty enemy
-  m_TagString: Enemy
+  m_TagString: Enemy3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
