@@ -14,6 +14,8 @@ public class StabEnemy : MonoBehaviour
     private GameObject player;
     public float fast;
     private Rigidbody stabRb;
+
+    private HealthPoints hurt;
     
     // Start is called before the first frame update
     void Start()
@@ -57,4 +59,5 @@ public class StabEnemy : MonoBehaviour
         }
         transform.LookAt(waypoints[waypointdex].position);
     }
+
 }

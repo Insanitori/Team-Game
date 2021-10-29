@@ -22,10 +22,9 @@ public class ShootEnemy : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        //shootRb = GetComponent<Rigidbody>();
+        shootRb = GetComponent<Rigidbody>();
         waypointdex = 0;
         transform.LookAt(waypoints[waypointdex].position);
-        transform.LookAt(Vector3.zero);
     }
 
     // Update is called once per frame
