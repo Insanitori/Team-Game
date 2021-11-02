@@ -19,8 +19,8 @@ public class SpawnManager : MonoBehaviour
 
     void spawnZoomies()
     {
-        float spawnPosX = Random.Range(8, 95);
-        Vector3 randomPos = new Vector3(spawnPosX, 0, -3);
+        float spawnPosZ = Random.Range(17, -75);
+        Vector3 randomPos = new Vector3(38, 0, spawnPosZ);
         Instantiate(zoomiePrefab, randomPos, zoomiePrefab.transform.rotation);
     }
 }

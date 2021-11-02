@@ -33,7 +33,7 @@ public class PlayerControl : MonoBehaviour
 
         //transform.Translate(Vector3.forward * Time.deltaTime * speed * hInport);
         //transform.Rotate(Vector3.up, turner * hInport * Time.deltaTime);
-        transform.Translate(Vector3.right * Time.deltaTime * speed * vInport);
+        transform.Translate(Vector3.back * Time.deltaTime * speed * vInport);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGorunded)
         {
@@ -41,19 +41,19 @@ public class PlayerControl : MonoBehaviour
             isGorunded = false;
         }
 
-        if (transform.position.x < -8.1)
+        if (transform.position.z < -50)
         {
-            transform.position = new Vector3(-8, transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y, -50);
         }
 
-        if (transform.position.z > 4)
+        if (transform.position.x < 34)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 4);
+            transform.position = new Vector3(34, transform.position.y, transform.position.z);
         }
 
-        if (transform.position.z < -5)
+        if (transform.position.x > 43)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, -5);
+            transform.position = new Vector3(43, transform.position.y, transform.position.z);
         }
     }
 }
