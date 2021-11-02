@@ -10,7 +10,7 @@ public class PlayerControl : MonoBehaviour
     private float vInport;
 
     private Vector3 jup;
-    private float jupin = 6.0f;
+    private float jupin = 4.0f;
     public bool isGorunded;
     Rigidbody rb;
     // Start is called before the first frame update

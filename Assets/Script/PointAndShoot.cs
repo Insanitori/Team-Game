@@ -49,7 +49,7 @@ public class PointAndShoot : MonoBehaviour
         GameObject b = Instantiate(bulletP) as GameObject;
         b.transform.position = shooter.transform.position;
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
-        b.GetComponent<Rigidbody2D>().velocity = direction * bulletspeed;
+        b.GetComponent<Rigidbody>().velocity = direction * bulletspeed;
     }
 
     private void OnGUI()
