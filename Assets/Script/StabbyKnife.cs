@@ -27,7 +27,7 @@ public class StabbyKnife : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             hurt = other.GetComponent<HealthPoints>();
-            hurt.DamagePlayer(5);
+            hurt.DamagePlayer(10);
             Debug.Log("Destroyed");
         }
     }
