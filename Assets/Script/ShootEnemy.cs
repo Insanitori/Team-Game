@@ -27,7 +27,7 @@ public class ShootEnemy : MonoBehaviour
         player = GameObject.Find("Player");
         shootRb = GetComponent<Rigidbody>();
         waypointdex = 0;
-        transform.LookAt(waypoints[waypointdex].position);
+        //transform.LookAt(waypoints[waypointdex].position);
 
         curHealth = maxHealth;
     }
@@ -41,8 +41,8 @@ public class ShootEnemy : MonoBehaviour
             //transform.LookAt(player.transform);
             if ((player.transform.position - this.transform.position).sqrMagnitude < 6 * 6)
             {
-                //shootRb.AddForce((player.transform.position + transform.position).normalized * fast);
-                transform.Translate(-transform.right * fast * Time.deltaTime);
+                shootRb.AddForce((player.transform.position + transform.position).normalized * fast);
+                //transform.Translate(-transform.right * fast * Time.deltaTime);
             }
         }
         else
@@ -64,7 +64,8 @@ public class ShootEnemy : MonoBehaviour
 
     void patrol()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        //transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.position = (Vector3.MoveTowards(transform.position, waypoints[waypointdex].position, speed * Time.deltaTime));
     }
 
     void IncreaseIndex()
@@ -74,7 +75,7 @@ public class ShootEnemy : MonoBehaviour
         {
             waypointdex = 0;
         }
-        transform.LookAt(waypoints[waypointdex].position);
+        //transform.LookAt(waypoints[waypointdex].position);
     }
 
     public void DamageEnemy(int damage)

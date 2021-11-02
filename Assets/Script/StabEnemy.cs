@@ -25,7 +25,7 @@ public class StabEnemy : MonoBehaviour
         player = GameObject.Find("Player");
         stabRb = GetComponent<Rigidbody>();
         waypointdex = 0;
-        transform.LookAt(waypoints[waypointdex].position);
+        //transform.LookAt(waypoints[waypointdex].position);
 
         curHealth = maxHealth;
     }
@@ -33,16 +33,18 @@ public class StabEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((player.transform.position - this.transform.position).sqrMagnitude < 4 * 4)
+        if ((player.transform.position - this.transform.position).sqrMagnitude < 6 * 6)
         {
-            stabRb.AddForce((player.transform.position - transform.position).normalized * fast);
-            //they also try to stab
+            Debug.Log("Forward");
+            //stabRb.AddForce((player.transform.position - transform.position).normalized * fast);
+            transform.position = (Vector3.MoveTowards(transform.position, player.transform.position, fast * Time.deltaTime));
         }
         else
         {
             dist = Vector3.Distance(transform.position, waypoints[waypointdex].position);
             if (dist < 1f)
             {
+                Debug.Log("Increased");
                 IncreaseIndex();
             }
             patrol();
@@ -57,7 +59,9 @@ public class StabEnemy : MonoBehaviour
 
     void patrol()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        //transform.Translate(Vector3.right * speed * Time.deltaTime);
+        transform.position = (Vector3.MoveTowards(transform.position, waypoints[waypointdex].position, speed * Time.deltaTime));
+        
     }
 
     void IncreaseIndex()
@@ -67,7 +71,7 @@ public class StabEnemy : MonoBehaviour
         {
             waypointdex = 0;
         }
-        transform.LookAt(waypoints[waypointdex].position);
+        //transform.LookAt(waypoints[waypointdex].position);
     }
 
     public void DamageEnemy(int damage)
