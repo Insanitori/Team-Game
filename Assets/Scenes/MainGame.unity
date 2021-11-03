@@ -874,8 +874,8 @@ MonoBehaviour:
   bulletP: {fileID: 2379838189152385998, guid: d4cf35ea4a422044682b1ed24e2ce664, type: 3}
   Player: {fileID: 1815767406}
   bulletspeed: 60
-  horizontalSpeed: 200
-  verticalSpeed: 200
+  horizontalSpeed: 300
+  verticalSpeed: 300
   cursorImage: {fileID: 2800000, guid: f859eff3dd709094fa0de7e75b1ac6ae, type: 3}
 --- !u!1 &1040506237
 GameObject:

@@ -22,7 +22,7 @@ public class HealthPoints : MonoBehaviour
             DamagePlayer(10);
         }*/
 
-        if(curHealth == 0)
+        if(curHealth <= 0)
         {
             Destroy(gameObject);
             Debug.Log("Game Over!");
