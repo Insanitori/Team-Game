@@ -13,16 +13,30 @@ public class PlayerControl : MonoBehaviour
     private float jupin = 4.5f;
     public bool isGorunded;
     Rigidbody rb;
+
+    public bool speedPowerUp;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         jup = new Vector3(0.0f, 5.0f, 0.0f);
+
+        speedPowerUp = false;
     }
 
     private void OnCollisionStay(Collision collision)
     {
         isGorunded = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Speed Powerup"))
+        {
+            speedPowerUp = true;
+            Destroy(other.gameObject);
+            StartCoroutine(SpeedCountdown());
+        }
     }
 
     // Update is called once per frame
@@ -55,5 +69,18 @@ public class PlayerControl : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, 3);
         }
+
+        if (speedPowerUp == true)
+        {
+            speed = 16.0f;
+        }
+
+    }
+
+    IEnumerator SpeedCountdown()
+    {
+        yield return new WaitForSeconds(5);
+        speedPowerUp = false;
+        speed = 10.0f;
     }
 }

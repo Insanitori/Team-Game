@@ -12,6 +12,7 @@ TagManager:
   - ES
   - Enemy2
   - Enemy3
+  - Speed Powerup
   layers:
   - Default
   - TransparentFX
