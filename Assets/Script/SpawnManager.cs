@@ -5,10 +5,12 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject zoomiePrefab;
+    public float begin;
+    public float end;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("spawnZoomies", 10, 20.0f);
+        InvokeRepeating("spawnZoomies", 5, 20.0f);
     }
 
     // Update is called once per frame
@@ -19,7 +21,7 @@ public class SpawnManager : MonoBehaviour
 
     void spawnZoomies()
     {
-        float spawnPosX = Random.Range(8, 95);
+        float spawnPosX = Random.Range(begin, end);
         Vector3 randomPos = new Vector3(spawnPosX, 0, -3);
         Instantiate(zoomiePrefab, randomPos, zoomiePrefab.transform.rotation);
     }
