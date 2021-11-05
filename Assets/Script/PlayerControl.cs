@@ -15,6 +15,9 @@ public class PlayerControl : MonoBehaviour
     Rigidbody rb;
 
     public bool speedPowerUp;
+    public bool jumpPowerUp;
+    public bool shotgun;
+    public bool crosshairs;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,9 @@ public class PlayerControl : MonoBehaviour
         jup = new Vector3(0.0f, 5.0f, 0.0f);
 
         speedPowerUp = false;
+        jumpPowerUp = false;
+        shotgun = false;
+        crosshairs = true;
     }
 
     private void OnCollisionStay(Collision collision)
@@ -37,6 +43,26 @@ public class PlayerControl : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(SpeedCountdown());
         }
+
+        if (other.CompareTag("Jump Powerup"))
+        {
+            jumpPowerUp = true;
+            Destroy(other.gameObject);
+            StartCoroutine(JumpCountdown());
+        }
+
+        if (other.CompareTag("ShotGun"))
+        {
+            shotgun = true;
+            Destroy(other.gameObject);
+            crosshairs = false;
+        }
+        else if (other.CompareTag("Crosshairs"))
+        {
+            crosshairs = true;
+            Destroy(other.gameObject);
+            shotgun = false;
+        }
     }
 
     // Update is called once per frame
@@ -48,6 +74,7 @@ public class PlayerControl : MonoBehaviour
         //transform.Translate(Vector3.forward * Time.deltaTime * speed * hInport);
         //transform.Rotate(Vector3.up, turner * hInport * Time.deltaTime);
         transform.Translate(Vector3.right * Time.deltaTime * speed * vInport);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * hInport);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGorunded)
         {
@@ -75,6 +102,11 @@ public class PlayerControl : MonoBehaviour
             speed = 16.0f;
         }
 
+        if (jumpPowerUp == true)
+        {
+            jupin = 6.0f;
+        }
+
     }
 
     IEnumerator SpeedCountdown()
@@ -82,5 +114,12 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(5);
         speedPowerUp = false;
         speed = 10.0f;
+    }
+
+    IEnumerator JumpCountdown()
+    {
+        yield return new WaitForSeconds(5);
+        jumpPowerUp = false;
+        jupin = 4.5f;
     }
 }

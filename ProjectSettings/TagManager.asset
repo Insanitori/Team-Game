@@ -13,6 +13,9 @@ TagManager:
   - Enemy2
   - Enemy3
   - Speed Powerup
+  - Jump Powerup
+  - ShotGun
+  - Crosshairs
   layers:
   - Default
   - TransparentFX
