@@ -26,8 +26,8 @@ public class PlayerControl : MonoBehaviour
 
         speedPowerUp = false;
         jumpPowerUp = false;
-        shotgun = false;
-        crosshairs = true;
+        shotgun = true;
+        crosshairs = false;
     }
 
     private void OnCollisionStay(Collision collision)

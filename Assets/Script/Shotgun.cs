@@ -16,11 +16,15 @@ public class Shotgun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerCon = player.GetComponent<PlayerControl>();
         if (PlayerCon.shotgun == true)
         {
             if (Input.GetKeyDown(KeyCode.K))
             {
-                InvokeRepeating("spawnbouncing", 0, 3.0f);
+                //InvokeRepeating("spawnbouncing", 0, 3.0f);
+
+                Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                Instantiate(bouncePrefab, pos, bouncePrefab.transform.rotation);
             }
         }
     }
@@ -35,7 +39,7 @@ public class Shotgun : MonoBehaviour
             vInport = Input.GetAxis("Horizontal2");
 
             transform.Translate(Vector3.right * Time.deltaTime * speed * vInport);
-            transform.Translate(Vector3.down * Time.deltaTime * speed * hInport);
+            transform.Translate(Vector3.up * Time.deltaTime * speed * hInport);
 
             if (transform.position.x > player.transform.position.x + 3)
             {
@@ -52,9 +56,17 @@ public class Shotgun : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, player.transform.position.y + 3, transform.position.z);
             }
 
-            if (transform.position.y > player.transform.position.y - 1)
+            if (transform.position.y < player.transform.position.y - 1)
             {
                 transform.position = new Vector3(transform.position.x, player.transform.position.y - 1, transform.position.z);
+            }
+
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                //InvokeRepeating("spawnbouncing", 0, 3.0f);
+
+                Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+                Instantiate(bouncePrefab, pos, bouncePrefab.transform.rotation);
             }
         }
         else
@@ -63,9 +75,9 @@ public class Shotgun : MonoBehaviour
         }
     }
 
-    void spawnbouncing()
+    /*void spawnbouncing()
     {
         Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         Instantiate(bouncePrefab, pos, bouncePrefab.transform.rotation);
-    }
+    }*/
 }

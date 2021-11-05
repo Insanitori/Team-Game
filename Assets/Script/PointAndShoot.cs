@@ -26,13 +26,15 @@ public class PointAndShoot : MonoBehaviour
         Cursor.visible = false;
         
         cursorPosition = new Vector2(Screen.width / 2f, Screen.height / 2f);
+
+        PlayerCon = Player.GetComponent<PlayerControl>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (PlayerCon.crosshairs == true)
+        if (PlayerCon.crosshairs == true)
         {
             shooter.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, Player.transform.position.z);
 
@@ -64,14 +66,15 @@ public class PointAndShoot : MonoBehaviour
 
     private void OnGUI()
     {
-        
-        float h = horizontalSpeed * Input.GetAxis("Horizontal2") * Time.deltaTime;
-        float v = verticalSpeed * Input.GetAxis("Vertical2") * Time.deltaTime;
-        cursorPosition.x += h;
-        cursorPosition.y += v;
+        if (PlayerCon.crosshairs == true)
+        {
+            float h = horizontalSpeed * Input.GetAxis("Horizontal2") * Time.deltaTime;
+            float v = verticalSpeed * Input.GetAxis("Vertical2") * Time.deltaTime;
+            cursorPosition.x += h;
+            cursorPosition.y += v;
 
-        GUI.DrawTexture(new Rect(cursorPosition.x, Screen.height - cursorPosition.y, cursorWidth, cursorHeight), cursorImage);
-        
+            GUI.DrawTexture(new Rect(cursorPosition.x, Screen.height - cursorPosition.y, cursorWidth, cursorHeight), cursorImage);
+        }
     }
 
 }

@@ -55,7 +55,7 @@ public class ShootEnemy : MonoBehaviour
             patrol();
         }
 
-        if (curHealth == 0)
+        if (curHealth <= 0)
         {
             Destroy(gameObject);
             Debug.Log("Shooter Dead");

@@ -25,7 +25,7 @@ public class zoomieEnemy : MonoBehaviour
     {
         zoomieRb.AddForce((player.transform.position - transform.position).normalized * speed);
 
-        if (curHealth == 0)
+        if (curHealth <= 0)
         {
             Destroy(gameObject);
             Debug.Log("Zoomer Dead");
