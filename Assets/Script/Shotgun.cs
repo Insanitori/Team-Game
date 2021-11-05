@@ -34,6 +34,7 @@ public class Shotgun : MonoBehaviour
     {
         if (PlayerCon.shotgun == true)
         {
+            gameObject.SetActive(true);
             Debug.Log("It's true!");
             hInport = Input.GetAxis("Vertical2");
             vInport = Input.GetAxis("Horizontal2");
@@ -71,7 +72,8 @@ public class Shotgun : MonoBehaviour
         }
         else
         {
-            transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z); 
+            transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+            gameObject.SetActive(false);
         }
     }
 

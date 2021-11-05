@@ -70,11 +70,8 @@ public class PlayerControl : MonoBehaviour
     {
         hInport = Input.GetAxis("Vertical");
         vInport = Input.GetAxis("Horizontal");
-
-        //transform.Translate(Vector3.forward * Time.deltaTime * speed * hInport);
-        //transform.Rotate(Vector3.up, turner * hInport * Time.deltaTime);
         transform.Translate(Vector3.right * Time.deltaTime * speed * vInport);
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * hInport);
+        //transform.Translate(Vector3.forward * Time.deltaTime * speed * hInport);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGorunded)
         {
