@@ -19,7 +19,7 @@ public class Shotgun : MonoBehaviour
         PlayerCon = player.GetComponent<PlayerControl>();
         if (PlayerCon.shotgun == true)
         {
-            if (Input.GetKeyDown(KeyCode.K))
+            if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 //InvokeRepeating("spawnbouncing", 0, 3.0f);
 

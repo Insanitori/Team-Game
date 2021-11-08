@@ -44,7 +44,7 @@ public class PointAndShoot : MonoBehaviour
             float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
             shooter.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
 
-            if (Input.GetKeyDown(KeyCode.K))
+            if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 float distrance = difference.magnitude;
                 Vector2 direction = difference / distrance;
