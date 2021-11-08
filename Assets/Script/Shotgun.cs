@@ -62,7 +62,7 @@ public class Shotgun : MonoBehaviour
                 transform.position = new Vector3(transform.position.x, player.transform.position.y - 1, transform.position.z);
             }
 
-            if (Input.GetKeyDown(KeyCode.K))
+            if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 //InvokeRepeating("spawnbouncing", 0, 3.0f);
 

@@ -390,7 +390,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hit Enter to
+  m_text: 'Hit i to
 
     Learn how to play'
   m_isRightToLeft: 0
