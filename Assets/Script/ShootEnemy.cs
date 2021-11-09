@@ -14,6 +14,7 @@ public class ShootEnemy : MonoBehaviour
     private GameObject player;
     public float fast;
     private Rigidbody shootRb;
+    Animator an;
 
     //private bool ShootUrShot;
     private float fireRate = 1f;
@@ -30,6 +31,8 @@ public class ShootEnemy : MonoBehaviour
         //transform.LookAt(waypoints[waypointdex].position);
 
         curHealth = maxHealth;
+
+        an = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -38,6 +41,8 @@ public class ShootEnemy : MonoBehaviour
         //Remember that you added a tiny game object to the player to make shoot!
         if ((player.transform.position - this.transform.position).sqrMagnitude < 15 * 15)
         {
+            an.SetBool("IsShootin", true);
+
             //transform.LookAt(player.transform);
             if ((player.transform.position - this.transform.position).sqrMagnitude < 6 * 6)
             {
@@ -53,6 +58,8 @@ public class ShootEnemy : MonoBehaviour
                 IncreaseIndex();
             }
             patrol();
+
+            an.SetBool("IsShootin", false);
         }
 
         if (curHealth <= 0)

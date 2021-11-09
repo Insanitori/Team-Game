@@ -13,7 +13,7 @@ public class PlayerControl : MonoBehaviour
     private float jupin = 4.5f;
     public bool isGorunded;
     Rigidbody rb;
-
+    
     public bool speedPowerUp;
     public bool jumpPowerUp;
     public bool shotgun;
@@ -23,6 +23,7 @@ public class PlayerControl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         jup = new Vector3(0.0f, 5.0f, 0.0f);
+    
 
         speedPowerUp = false;
         jumpPowerUp = false;

@@ -18,6 +18,7 @@ public class StabEnemy : MonoBehaviour
     private HealthPoints hurt;
     public int curHealth = 1;
     public int maxHealth = 100;
+    Animator an;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,8 @@ public class StabEnemy : MonoBehaviour
         stabRb = GetComponent<Rigidbody>();
         waypointdex = 0;
         //transform.LookAt(waypoints[waypointdex].position);
+        an = GetComponent<Animator>();
+       
 
         curHealth = maxHealth;
     }
@@ -38,7 +41,9 @@ public class StabEnemy : MonoBehaviour
             Debug.Log("Forward");
             //stabRb.AddForce((player.transform.position - transform.position).normalized * fast);
             transform.position = (Vector3.MoveTowards(transform.position, player.transform.position, fast * Time.deltaTime));
-        }
+
+            an.SetBool("IsStabbing", true);
+         }
         else
         {
             dist = Vector3.Distance(transform.position, waypoints[waypointdex].position);
@@ -48,6 +53,8 @@ public class StabEnemy : MonoBehaviour
                 IncreaseIndex();
             }
             patrol();
+
+            an.SetBool("IsStabbing", false);
         }
 
         if (curHealth <= 0)
