@@ -1,0 +1,6 @@
+Duality
+
+You are a lost spirit! You must attempt to escape the dark forest or it will kill you and you will be forced to become one with nature.
+This is a two player co-op game where player one moves and player two shoots with different types of guns against different plant type enemies.
+
+There's platforming, fighting and a health bar
