@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44932222, g: 0.49939877, b: 0.57570547, a: 1}
+  m_IndirectSpecularColor: {r: 0.45082992, g: 0.49905932, b: 0.565615, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1403,9 +1403,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.7694843
-  m_Height: 4.0571423
+  m_Height: 2.6526442
   m_Direction: 1
-  m_Center: {x: 0.26948428, y: 0.04715967, z: 0}
+  m_Center: {x: 0.26948428, y: 0.028958797, z: 0}
 --- !u!4 &374560238
 Transform:
   m_ObjectHideFlags: 0
@@ -1414,7 +1414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374560230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.34, y: 0.65, z: -3}
+  m_LocalPosition: {x: -8.34, y: 0.79, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1189254200}
@@ -1438,7 +1438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3679623299854960048, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.7
+      value: 14.78
       objectReference: {fileID: 0}
     - target: {fileID: 3679623299854960048, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1483,6 +1483,22 @@ PrefabInstance:
     - target: {fileID: 3679623299854960052, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
       propertyPath: m_Name
       value: Stabby enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679623299854960053, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4717216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679623299854960053, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
+      propertyPath: m_Size.y
+      value: 2.4790673
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679623299854960053, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
+      propertyPath: m_Center.x
+      value: 0.23586082
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679623299854960053, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
+      propertyPath: m_Center.y
+      value: 0.02698493
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
@@ -1894,6 +1910,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stabby enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3679623299854960053, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5006166
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679623299854960053, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
+      propertyPath: m_Center.y
+      value: 0.025215387
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
 --- !u!1 &766350746
@@ -1982,13 +2006,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766350746}
-  m_LocalRotation: {x: 0.11705366, y: -0.650341, z: 0.39356327, w: 0.63911116}
-  m_LocalPosition: {x: 18.1, y: 18.7, z: -33.9}
+  m_LocalRotation: {x: 0.18094315, y: -0.13241568, z: 0.2030973, w: 0.95314074}
+  m_LocalPosition: {x: 20.3, y: 18.34, z: -38.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 41.416, y: -80.272, z: 27.891}
+  m_LocalEulerAnglesHint: {x: 23.498, y: -11.251, z: 21.71}
 --- !u!4 &844534541 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1441d60429161401f8195d20b42a86a5, type: 3}
@@ -2064,6 +2088,14 @@ PrefabInstance:
     - target: {fileID: 3679623299854960052, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
       propertyPath: m_Name
       value: Stabby enemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679623299854960053, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
+      propertyPath: m_Size.y
+      value: 2.2946193
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679623299854960053, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
+      propertyPath: m_Center.y
+      value: 0.052712798
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
@@ -2228,6 +2260,14 @@ PrefabInstance:
     - target: {fileID: 3679623299854960052, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
       propertyPath: m_Name
       value: Stabby enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679623299854960053, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
+      propertyPath: m_Size.y
+      value: 2.460831
+      objectReference: {fileID: 0}
+    - target: {fileID: 3679623299854960053, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}
+      propertyPath: m_Center.y
+      value: 0.06927645
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 892b845741fff024c8a6e4c5276778b7, type: 3}

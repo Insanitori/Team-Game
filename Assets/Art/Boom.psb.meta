@@ -98,10 +98,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1938
-      y: 4
-      width: 931
-      height: 1301
+      x: 4
+      y: 0
+      width: 2044
+      height: 2044
     spriteID: d71c814fdf4f44a048d419bd6f74d4d9
     internalID: 0
     spriteBone: []
@@ -112,51 +112,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1387, y: -234}
-  - name: Layer 3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 1926
-      height: 1823
-    spriteID: dd7e88cb337ac44c392477be6791b82c
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -55, y: -115}
-  - name: Layer 3_1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 1835
-      width: 1923
-      height: 1819
-    spriteID: e71ac4a506d344b44b6186cfa84aaba7
-    internalID: 0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -56, y: 1714}
+    uvTransform: {x: -59, y: -115}
   platformSettings: []
   mosaicLayers: 1
   documentPivot: {x: 0, y: 0}
@@ -169,8 +125,8 @@ ScriptedImporter:
   keepDupilcateSpriteName: 0
   spriteCategoryList:
     categories: []
-  textureActualWidth: 4096
-  textureActualHeight: 4096
+  textureActualWidth: 2048
+  textureActualHeight: 2048
   spritePackingTag: 
   resliceFromLayer: 0
   characterMode: 1
@@ -182,21 +138,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: d71c814fdf4f44a048d419bd6f74d4d9
     layerID: 5
-    mosaicPosition: {x: 1938, y: 4}
-  - name: Layer 3
-    spriteName: Layer 3
-    isGroup: 0
-    parentIndex: -1
-    spriteID: dd7e88cb337ac44c392477be6791b82c
-    layerID: 4
     mosaicPosition: {x: 4, y: 4}
-  - name: Layer 3
-    spriteName: Layer 3_1
-    isGroup: 0
-    parentIndex: -1
-    spriteID: e71ac4a506d344b44b6186cfa84aaba7
-    layerID: 3
-    mosaicPosition: {x: 4, y: 1835}
   characterData:
     bones: []
     parts: []
